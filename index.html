@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Playlist Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>YouTube Playlist Downloader</h1>
+    <input type="text" id="playlistUrl" placeholder="Enter YouTube playlist URL">
+    <button onclick="downloadPlaylist()">Download Playlist</button>
+    <div id="result"></div>
+
+    <script>
+        function downloadPlaylist() {
+            const playlistUrl = document.getElementById('playlistUrl').value;
+            const resultDiv = document.getElementById('result');
+
+            // Here you would typically make an API call to a backend service
+            // that handles the actual downloading of the playlist.
+            // For this example, we'll just show a message.
+
+            resultDiv.innerHTML = `Downloading playlist: ${playlistUrl}<br>
+                                   (Note: This is a demo. No actual download occurs.)`;
+        }
+    </script>
+</body>
+</html>
